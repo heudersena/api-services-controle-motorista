@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="name" />
+    <button>adicionar</button>
+
+    <div id="list"></div>
+
+    <script>
+      const btn = document.querySelector("button");
+      const input = document.querySelector("input");
+      const listId = document.querySelector("#list");
+
+      const list = []
+
+      btn.addEventListener("click", (event) => {
+        const name = input.value;
+        list.push(name)
+        listId.innerHTML += list
+      });
+      listId.innerHTML += list
+    </script>
+  </body>
+</html>
